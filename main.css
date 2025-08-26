@@ -1,0 +1,300 @@
+/* Wolf Martin Cs-125h-lab-7 8/26/2025 V5.3 */
+/*Color palette
+ #ffffff- whitesmoke
+ #fae900- bright yellow
+ #fa8e00- dark yellow
+ #000031- dark blue
+ #181363- dark navy
+ #52527e- grey kinda blue aswell
+ #ffea00cc- bright yellow (hover)
+ #020252- almost black
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/*html*/
+html {
+    background-image: url(images/starsbackground.jpg);
+    background-position: center;
+    scroll-behavior: smooth;
+}
+/*Body Info*/
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial', sans-serif;
+    color: #ffffff;
+    padding: .5em;
+    width: 90%;
+    max-width: 900px;
+    max-height: 100%;
+    margin: 1em auto;
+}
+
+/*links*/
+a:link {
+    color: #fae900;
+    text-decoration: none;
+}
+a:hover:focus {
+    color: #fa8e00;
+    text-decoration: underline;
+}
+a:hover {
+    color: #fa8e00;
+    text-decoration: underline;
+}
+a:visited {
+    color: #fa0000;
+}
+/*inside figure span*/
+figure a span{
+    right: .2em;
+    bottom: .2em;
+    position: absolute;
+    color: whitesmoke;
+    font-size: 115%;
+    transition: 0.2s ease-out;
+}
+a span:hover {
+    background-color: #fae900;
+    color: #000031;
+    transform: translateY(-2px) scale(1.1);
+}
+/*outside figure span*/
+a span:not(figure a span) {
+    right: 1.2em;
+    bottom: 1.2em;
+    position: fixed;
+    border: #52527e .1em solid;
+    color: whitesmoke;
+    background-color: #181363;
+    font-size: 115%;
+    transition: 0.2s ease-out;
+    padding: .3em;
+}
+a span:hover:not(figure a span):not(ul li a span) {
+    background-color: #fae900;
+    color: #000031;
+    transform: translateY(-2px) scale(1.1);
+}
+/*plain element*/
+header, footer {
+    background-image: linear-gradient(to right, #181363, #52527e, black, #52527e, #181363);
+}
+p {
+    text-align: left;
+    font-size: 110%;
+}
+h5{
+    text-align: center;
+    font-size: 120%;
+    margin: 1em 0;
+}
+dl {
+ font-family: fantasy;
+ letter-spacing: .05em;
+}
+dt dl {
+    font-size: 130%;
+    padding-bottom: .5em;
+}
+/*nav bar*/
+nav {
+    padding: .5em 0;
+    text-align: center;
+    border: #52527e .3em solid;
+    background-color: #181363;
+    border-radius: .3em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+ nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+ }
+ nav ul li {
+    margin-right: 2em;
+    margin-left: 2em;
+ }
+ nav ul li a:link  {
+    color: whitesmoke;
+ margin-right: 0;
+ }
+ nav ul li:hover ul li {
+ display: block;
+
+}
+/*header*/
+header {
+    text-align: center;
+    border: #52527e .3em solid;
+    border-radius: .3em;
+    margin-bottom: 1em;
+    padding: 1em;
+    margin-top: 10%;
+}
+header h1 {
+    text-align: center;
+    letter-spacing: .15em;
+    text-shadow: .1em .1em 0px rgb(82, 82, 82);
+}
+
+/*aside*/
+aside{
+    background-color: #181363;
+    border: .3em solid #52527e;
+    margin-top: .5em;
+    float: right;
+    width: 30%;
+    position: sticky;
+    top: 0;
+    padding: .2em;
+}
+aside h2 {
+    text-align: center;
+    font-size: 150%;
+    letter-spacing: .3em;
+    text-shadow: .1em .1em 0px rgb(82, 82, 82);
+    border-bottom: .1em solid #52527e;
+    margin-top: .05em;
+}
+aside p{
+    font-size: 1em;
+    padding-left: .5em;
+    padding-top: .5em;
+}
+aside img {
+    display: block;
+    clip-path: circle(50%);
+    width: 80%;
+    max-width: 200px;
+    margin: 1em auto;
+}
+/*#pages aside*/
+#pages2 {
+    background-color: #181363;
+    border: .3em solid #52527e;
+    margin-top: .5em;
+    float: right;
+    width: 20%;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
+/*styles for parent floated containers,aside,main*/
+aside, main{
+    border-radius: .3em;
+    margin: 1em 0;
+}
+
+/*styles form main*/
+main {
+    width: 65%;
+    float: left;
+    background-color: #52527e;
+    padding: 0 .5em;
+}
+main h2 {
+    text-align: center;
+    font-size: 180%;
+    margin-bottom: .5em;
+}
+main p {
+    text-indent: 1em;
+}
+/*styles for section nested in main*/
+ main section {
+    background-color: #000031;
+    border-radius: .3em;
+    padding: .5em;
+    margin: .5em 0;
+}
+/*styles for articles nested in section nested in main*/
+main section article {
+    background-color: #000031;
+    padding: 1em;
+    border-radius: 8px;
+    border: .1em solid #52527e;
+    margin-top: .9em;
+    margin-bottom: .9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+ section article h2 {
+    text-align: center;
+    font-size: 200%;
+    margin-bottom: .5em;
+}
+section article dl {
+    margin: .1em 0;
+    padding: .3em .4em;
+}
+section article dl dt {
+ font-size: 130%;
+ padding-bottom: .5em   ;
+}
+section article dd {
+    font-size: 110%;
+    font-style: italic;
+    padding-left: .5em;
+    margin-bottom: .5em;
+}
+section article img {
+    padding-bottom: .5em;
+}
+/*front page photo's*/
+section article figure {
+ width: 80%;
+ margin: 2em auto;
+ background-color: black;
+ border: .1em solid #000000;
+ padding: .5em;
+ position: relative;
+ transition: 0.2s ease-out;
+}
+section article figure img{
+ width: 100%;
+}
+section article figure:hover {
+ border: .1em solid #ffffff;
+}
+section article figcaption {
+ padding: 3em 1em;
+ font-size: 1em;
+ text-align: center;
+}
+/*styles for articles nested in section nested in main In #id gallery*/
+ #pages{
+    width: 98%;
+    background-color: #52527e;
+}
+/*styles for last article in section containing instagram link*/
+section article:last-of-type {
+    display: block;
+    background-color: #000031;
+    border: .3em solid #52527e;
+    margin-top: .5em;
+}
+section article:last-of-type img {
+    width: 20%;
+    display: block;
+    margin: .5em auto;
+    transition: ease-out 0.2s;
+}
+section article:last-of-type img:hover {
+    filter: hue-rotate(30deg);
+    width: 21%;
+}
+/*footer info*/
+footer {
+ margin-top: .5em;
+ padding: 1em;
+ text-align: center;
+ clear: both;
+}
+footer p {
+ font-size: 80%;
+ text-align: center;
+}
